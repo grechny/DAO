@@ -4,7 +4,6 @@ import dto.Mark;
 import dto.Student;
 import dto.Subject;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -20,7 +19,7 @@ import java.util.ArrayList;
 
 public class Lesson8 {
 
-    public static void main (String args[]) throws SQLException, ClassNotFoundException {
+    public static void main (String args[]) throws Exception {
 
         DAOFactory mysqlFactory = DAOFactory.getDAOFactory(DAOFactory.MYSQL);
         GenericDAO studentDAO = mysqlFactory.getStudentsDAO();
