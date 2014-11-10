@@ -10,13 +10,13 @@ public abstract class DAOFactory {
     public abstract GenericDAO getSubjectsDAO();
     public abstract GenericDAO getMarksDAO();
 
-    public static DAOFactory getDAOFactory(int whichFactory) {
+    public static DAOFactory getDAOFactory(int whichFactory) throws Exception {
 
         switch (whichFactory) {
             case MYSQL:
                 return new MySQLDAOFactory();
             default:
-                return null;
+                throw new Exception("Create DAO Factory error");
         }
     }
 }

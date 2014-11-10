@@ -43,7 +43,7 @@ public abstract class AbstractMySQLDAO<T> implements GenericDAO<T>{
     }
 
     @Override
-    public ArrayList<T> selectAll() throws SQLException {
+    public List<T> selectAll() throws SQLException {
         String sql = selectAllQuery();
         PreparedStatement statement = connection.prepareStatement(sql);
         ResultSet rs = statement.executeQuery();
