@@ -73,7 +73,7 @@ public abstract class AbstractMySQLDAO<T> implements GenericDAO<T>{
         ArrayList<T> list;
         list = parseResultSet(rs);
 
-        if (list == null || list.size() == 0) return null;
+        if (list == null || list.size() == 0) throw new Error("Object hasn't been created");
 
         return list.iterator().next();
     }

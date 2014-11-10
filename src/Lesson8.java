@@ -80,6 +80,5 @@ public class Lesson8 {
         studentDAO.delete(student.getId());
         subjectDAO.delete(subject.getId());
         markDAO.delete(mark.getId());
-
     }
 }
