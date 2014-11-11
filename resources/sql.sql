@@ -18,9 +18,9 @@ CREATE TABLE marks (
   INDEX student_id (student_id),
   INDEX subject_id (subject_id),
   CONSTRAINT marks_ibfk_1 FOREIGN KEY (student_id)
-  REFERENCES lesson8.students (id) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  REFERENCES students (id) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT marks_ibfk_2 FOREIGN KEY (subject_id)
-  REFERENCES lesson8.subjects (id) ON DELETE RESTRICT ON UPDATE RESTRICT
+  REFERENCES subjects (id) ON DELETE RESTRICT ON UPDATE RESTRICT
 );
 INSERT INTO students(id, first_name, last_name) VALUES (1, 'Alexander', 'Grechny');
 INSERT INTO students(id, first_name, last_name) VALUES (2, 'Natallia', 'Kosyak');
